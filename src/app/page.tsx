@@ -1,3 +1,12 @@
+import Navbar from "./components/Navbar";
+
 export default function Home() {
-  return <h1 className="font-bold text-blue-500">Tailwind is Working 🎉</h1>
+  return (
+    <main>
+      <Navbar />
+      <section id="home" className="h-screen flex items-center justify-center bg-gray-100">
+        <h1 className="text-5xl font-bold">Welcome to My Portfolio 🚀</h1>
+      </section>
+    </main>
+  );
 }
