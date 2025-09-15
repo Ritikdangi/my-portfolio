@@ -1,19 +1,27 @@
-"use client";
-
-import Link from "next/link";
-
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full bg-white shadow-md z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-gray-800">MyPortfolio</h1>
-        <div className="space-x-6">
-          <Link href="#home" className="hover:text-blue-600">Home</Link>
-          <Link href="#about" className="hover:text-blue-600">About</Link>
-          <Link href="#projects" className="hover:text-blue-600">Projects</Link>
-          <Link href="#contact" className="hover:text-blue-600">Contact</Link>
-        </div>
+    <nav
+      className="fixed top-6 left-1/2 transform -translate-x-1/2 
+      w-[95%] sm:w-[90%] lg:w-[80%] 
+      rounded-full bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg 
+      px-4 sm:px-6 py-3 flex items-center justify-between z-50"
+    >
+      {/* Avatar / Logo */}
+      <div className="flex items-center gap-2">
+        <img
+          src="/avatar.png"
+          alt="logo"
+          className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/30"
+        />
       </div>
+
+      {/* Nav Links */}
+      <ul className="hidden sm:flex gap-6 md:gap-8 text-white font-mono text-xs sm:text-sm">
+        <li><a href="#home" className="hover:text-purple-300">{"</Home>"}</a></li>
+        <li><a href="#about" className="hover:text-purple-300">{"</AboutMe>"}</a></li>
+        <li><a href="#skills" className="hover:text-purple-300">{"</Skills>"}</a></li>
+        <li><a href="#projects" className="hover:text-purple-300">{"</Projects>"}</a></li>
+      </ul>
     </nav>
-  );
+  )
 }
