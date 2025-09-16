@@ -1,9 +1,64 @@
-import React from 'react'
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { container, item } from "./Hero";
 
 function About() {
   return (
-    <div>About</div>
-  )
+    <section id="about" className="relative min-h-screen py-12  flex items-center  overflow-hidden">
+      <motion.div
+        className="w-full max-w-7xl mx-auto px-6 mt-5 sm:px-10 lg:px-32 xl:px-48 flex flex-col lg:flex-row items-center lg:items-start ]"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {/* Left Content */}
+        <motion.div className="w-full lg:w-3/5 " variants={item}>
+          <motion.div className="flex items-center mb-8" variants={item}>
+            <motion.h2 className="text-2xl pb-1 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+              &lt;/AboutMe&gt;
+            </motion.h2>
+            <motion.div className="ml-4 flex-1 h-[1px] bg-gradient-to-r from-cyan-400 to-pink-400" />
+          </motion.div>
+
+          <motion.p
+            className="mt-4 text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed"
+            variants={item}
+          >
+            Hi, I’m Ritik.  
+            I’m a Full-Stack Developer passionate about turning ideas into scalable, user-friendly web applications. I enjoy working across the stack — from designing clean, responsive interfaces to building robust backend systems.
+          </motion.p>
+         
+          <motion.p
+            className="mt-4 text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed"
+            variants={item}
+          >
+           My journey into web development began with curiosity about how the web works, and over time it’s grown into a strong interest in creating products that are not only functional but also impactful.
+          </motion.p>
+
+          <motion.p
+            className="mt-4 text-gray-300   text-base sm:text-lg lg:text-xl leading-relaxed"
+            variants={item}
+          >
+            These days, my focus is on creating scalable web apps, crafting clean user experiences, and exploring modern web technologies.
+          </motion.p>
+        </motion.div>
+
+        {/* Right Side Image */}
+        <motion.div
+          className="w-full lg:w-2/5 flex justify-center pt-20  lg:justify-end"
+          variants={item}
+        >
+          <img
+            src="/profile.jpg"
+            alt="Profile"
+            className="rounded-lg shadow-lg w-64 h-72 object-cover"
+          />
+        </motion.div>
+      </motion.div>
+    </section>
+  );
 }
 
-export default About
+export default About;

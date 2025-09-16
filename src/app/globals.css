@@ -2,8 +2,9 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-html {
+html body {
   scroll-behavior: smooth;
+  background-color: #151524;
 }
 
 .gradient-text {
@@ -12,7 +13,11 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientMove 8s ease infinite;
+ 
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
+
 
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
