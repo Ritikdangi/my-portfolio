@@ -21,7 +21,7 @@ function About() {
             <h2 className="text-2xl pb-1.5 bg-gradient-to-r tracking-wide leading-loose from-cyan-400 to-pink-400 bg-clip-text text-transparent">
               &lt;/AboutMe&gt;
             </h2>
-            <div className="ml-2 flex-1 h-[1px] bg-gradient-to-r from-cyan-400 to-pink-400" />
+            <div className="ml-2 w-[50%] sm:w-[51%] md:w-[55%] lg:w-[83%] h-[1px] bg-gradient-to-r from-cyan-400 to-pink-400" />
           </div>
 
           <p className="mt-3 text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed">

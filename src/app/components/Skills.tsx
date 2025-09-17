@@ -49,7 +49,7 @@ export default function Skills() {
           <h2 className="text-2xl pb-1.5 bg-gradient-to-r tracking-wide leading-loose from-cyan-400 to-pink-400 bg-clip-text text-transparent">
             &lt;/Skills&gt;
           </h2>
-          <div className="ml-3 flex-1 h-[1px] bg-gradient-to-r from-cyan-400 to-pink-400" />
+          <div className="ml-2 w-[60%] sm:w-[60%] md:w-[60%] lg:w-[50%] h-[1px] bg-gradient-to-r from-cyan-400 to-pink-400" />
         </motion.div>
 
         {/* Sub-heading */}
