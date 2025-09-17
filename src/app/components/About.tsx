@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { container, item } from "./Hero";
+import { DownloadCloud } from "lucide-react";
 
 function About() {
   return (
@@ -15,15 +16,15 @@ function About() {
       >
         {/* Left Content */}
         <motion.div className="w-full lg:w-3/5 " variants={item}>
-          <motion.div className="flex items-center mb-8" variants={item}>
-            <motion.h2 className="text-2xl pb-1 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+          <motion.div className="flex items-center mb-5" variants={item}>
+            <motion.h2 className="text-2xl pb-1.5 bg-gradient-to-r tracking-wide leading-loose from-cyan-400 to-pink-400 bg-clip-text text-transparent">
               &lt;/AboutMe&gt;
             </motion.h2>
-            <motion.div className="ml-4 flex-1 h-[1px] bg-gradient-to-r from-cyan-400 to-pink-400" />
+            <motion.div className="ml-2 flex-1 h-[1px] bg-gradient-to-r from-cyan-400 to-pink-400" />
           </motion.div>
 
           <motion.p
-            className="mt-4 text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed"
+            className="mt-3 text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed"
             variants={item}
           >
             Hi, I’m Ritik.  
@@ -31,18 +32,40 @@ function About() {
           </motion.p>
          
           <motion.p
-            className="mt-4 text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed"
+            className="mt-3 text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed"
             variants={item}
           >
            My journey into web development began with curiosity about how the web works, and over time it’s grown into a strong interest in creating products that are not only functional but also impactful.
           </motion.p>
 
           <motion.p
-            className="mt-4 text-gray-300   text-base sm:text-lg lg:text-xl leading-relaxed"
+            className="mt-3 text-gray-300   text-base sm:text-lg lg:text-xl leading-relaxed"
             variants={item}
           >
             These days, my focus is on creating scalable web apps, crafting clean user experiences, and exploring modern web technologies.
           </motion.p>
+      {/* resume button will come here  */}
+      <motion.div variants={item} className="mt-6">
+  <a
+    href="/Ritik_Resume.pdf" // <-- replace with your resume path
+    download
+    className="group relative flex items-center overflow-hidden 
+               rounded-full bg-gradient-to-r from-pink-500 to-purple-600 
+               text-white shadow-lg transition-all duration-500 
+               hover:pr-6 w-12 h-12 hover:w-36"
+  >
+    <span className="flex items-center justify-center w-12 h-12">
+      <DownloadCloud size={22} />
+    </span>
+    <span
+      className="absolute left-12 opacity-0 group-hover:opacity-100 
+                 transition-opacity duration-500 text-sm font-medium"
+    >
+      Resume
+    </span>
+  </a>
+</motion.div>
+
         </motion.div>
 
         {/* Right Side Image */}
