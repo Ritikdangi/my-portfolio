@@ -25,3 +25,9 @@ html body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+:root {
+  --tech-stack-box-first-color: #1b1b28;
+  --tech-stack-box-second-color: #2c2c3a;
+  --tech-stack-box-border-color: rgba(255, 255, 255, 0.1);
+}

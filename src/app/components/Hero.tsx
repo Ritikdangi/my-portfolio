@@ -6,13 +6,38 @@ export const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.18 },
+    transition: { staggerChildren: 0.08 },
   },
 };
 
 export const item = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" as const } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" as const },
+  },
+  exit: {
+    opacity: 0,
+    y: 40,
+    transition: { duration: 0.3, ease: "easeIn" as const },
+  },
+};
+
+export const card = {
+  hidden: { opacity: 0, y: 40, scale: 0.96 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.3, ease: "easeOut" as const },
+  },
+  exit: {
+    opacity: 0,
+    y: 40,
+    scale: 0.96,
+    transition: { duration: 0.25, ease: "easeIn" as const },
+  },
 };
 
 const tagline = "I design, build & scale for the web".split(" ");

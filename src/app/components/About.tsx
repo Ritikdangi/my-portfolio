@@ -1,84 +1,65 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { container, item } from "./Hero";
+import { container } from "./Hero";
+import { AnimatedReveal } from "./AnimatedCard"; 
 import { DownloadCloud } from "lucide-react";
 
 function About() {
   return (
-    <section id="about" className="relative min-h-screen py-12  flex items-center  overflow-hidden">
+    <section id="about" className="relative min-h-screen py-12 flex items-center overflow-hidden">
       <motion.div
-        className="w-full max-w-7xl mx-auto px-6 mt-5 sm:px-10 lg:px-32 xl:px-48 flex flex-col lg:flex-row items-center lg:items-start ]"
+        className="w-full max-w-7xl mx-auto px-6 mt-5 sm:px-10 lg:px-32 xl:px-48 flex flex-col lg:flex-row items-center lg:items-start"
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
         {/* Left Content */}
-        <motion.div className="w-full lg:w-3/5 " variants={item}>
-          <motion.div className="flex items-center mb-5" variants={item}>
-            <motion.h2 className="text-2xl pb-1.5 bg-gradient-to-r tracking-wide leading-loose from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+        <AnimatedReveal className="w-full lg:w-3/5">
+          <div className="flex items-center mb-5">
+            <h2 className="text-2xl pb-1.5 bg-gradient-to-r tracking-wide leading-loose from-cyan-400 to-pink-400 bg-clip-text text-transparent">
               &lt;/AboutMe&gt;
-            </motion.h2>
-            <motion.div className="ml-2 flex-1 h-[1px] bg-gradient-to-r from-cyan-400 to-pink-400" />
-          </motion.div>
+            </h2>
+            <div className="ml-2 flex-1 h-[1px] bg-gradient-to-r from-cyan-400 to-pink-400" />
+          </div>
 
-          <motion.p
-            className="mt-3 text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed"
-            variants={item}
-          >
-            Hi, I’m Ritik.  
-            I’m a Full-Stack Developer passionate about turning ideas into scalable, user-friendly web applications. I enjoy working across the stack — from designing clean, responsive interfaces to building robust backend systems.
-          </motion.p>
-         
-          <motion.p
-            className="mt-3 text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed"
-            variants={item}
-          >
-           My journey into web development began with curiosity about how the web works, and over time it’s grown into a strong interest in creating products that are not only functional but also impactful.
-          </motion.p>
+          <p className="mt-3 text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed">
+            Hi, I’m Ritik. I’m a Full-Stack Developer passionate about turning ideas into scalable, user-friendly web applications. I enjoy working across the stack — from designing clean, responsive interfaces to building robust backend systems.
+          </p>
 
-          <motion.p
-            className="mt-3 text-gray-300   text-base sm:text-lg lg:text-xl leading-relaxed"
-            variants={item}
-          >
+          <p className="mt-3 text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed">
+            My journey into web development began with curiosity about how the web works, and over time it’s grown into a strong interest in creating products that are not only functional but also impactful.
+          </p>
+
+          <p className="mt-3 text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed">
             These days, my focus is on creating scalable web apps, crafting clean user experiences, and exploring modern web technologies.
-          </motion.p>
-      {/* resume button will come here  */}
-      <motion.div variants={item} className="mt-6">
-  <a
-    href="/Ritik_Resume.pdf" // <-- replace with your resume path
-    download
-    className="group relative flex items-center overflow-hidden 
-               rounded-full bg-gradient-to-r from-pink-500 to-purple-600 
-               text-white shadow-lg transition-all duration-500 
-               hover:pr-6 w-12 h-12 hover:w-36"
-  >
-    <span className="flex items-center justify-center w-12 h-12">
-      <DownloadCloud size={22} />
-    </span>
-    <span
-      className="absolute left-12 opacity-0 group-hover:opacity-100 
-                 transition-opacity duration-500 text-sm font-medium"
-    >
-      Resume
-    </span>
-  </a>
-</motion.div>
+          </p>
 
-        </motion.div>
+          <div className="mt-6">
+            <a
+              href="/Ritik_Resume.pdf"
+              download
+              className="group relative flex items-center overflow-hidden rounded-full bg-gradient-to-r from-pink-400 to-purple-600 text-white shadow-lg transition-all duration-500 hover:pr-6 w-12 h-12 hover:w-36"
+            >
+              <span className="flex items-center justify-center w-12 h-12">
+                <DownloadCloud size={22} />
+              </span>
+              <span className="absolute left-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-sm font-medium">
+                Resume
+              </span>
+            </a>
+          </div>
+        </AnimatedReveal>
 
         {/* Right Side Image */}
-        <motion.div
-          className="w-full lg:w-2/5 flex justify-center pt-20  lg:justify-end"
-          variants={item}
-        >
+        <AnimatedReveal className="w-full lg:w-2/5 flex justify-center pt-20 lg:justify-end">
           <img
             src="/profile.jpg"
             alt="Profile"
             className="rounded-lg shadow-lg w-64 h-72 object-cover"
           />
-        </motion.div>
+        </AnimatedReveal>
       </motion.div>
     </section>
   );
