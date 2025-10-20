@@ -2,10 +2,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-html body {
+html, body {
   scroll-behavior: smooth;
   background-color: #151524;
-  overflow-x : hidden;
+  overflow-x: hidden;
+  overscroll-behavior-y: none; /* prevent vertical bounce/overscroll */
+  touch-action: pan-x pan-y; /* allow normal pans but avoid extra gestures */
 }
 
 .gradient-text {

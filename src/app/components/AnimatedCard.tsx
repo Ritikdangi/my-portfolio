@@ -18,7 +18,7 @@ export function AnimatedReveal({
   className = "",
 }: AnimatedRevealProps) {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.15 });
+  const [ref, inView] = useInView({ threshold: 0.5 });
 
   useEffect(() => {
     controls.start(inView ? "show" : "exit");

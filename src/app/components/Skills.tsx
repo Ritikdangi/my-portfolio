@@ -30,9 +30,9 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative min-h-screen py-16">
+    <section id="skills" className="relative min-h-screen py-16 pr-8 overflow-x-hidden">
       <motion.div
-        className="w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-32 xl:px-48 flex flex-col"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-10 lg:px-32 xl:px-48 flex flex-col"
         variants={container}
         initial="hidden"
         whileInView="show"
@@ -64,31 +64,33 @@ export default function Skills() {
         </motion.h3>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-10 justify-center">
-          {skills.map((skill, i) => (
-            <AnimatedReveal
-              key={skill.name + i}
-              type="card"
-              className="relative flex items-center justify-center
-                w-40 h-40 md:w-44 md:h-44
-                rounded-[30px] border border-[var(--tech-stack-box-border-color)]
-                backdrop-blur-xl
-                shadow-[0_8px_24px_rgba(0,0,0,0.7)]
-                transition-all duration-300 group
-                hover:scale-105 hover:shadow-[0_12px_32px_rgba(0,0,0,0.8)]
-                [--tw-bg-opacity:0.6] [--tw-border-opacity:0.2]"
-            >
-              <div className="absolute top-1 px-2 py-1 bg-[#0f1114]/70 border border-white/10 rounded-md text-xs text-gray-200
-                opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0
-                transition-all duration-300 ease-out">
-                {skill.name}
-              </div>
-              <div className="flex items-center justify-center w-full h-full scale-150">
-                {skill.icon}
-              </div>
-            </AnimatedReveal>
-          ))}
-        </div>
+     <div className="w-full sm:pr-6 lg:px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 justify-center items-center">
+  {skills.map((skill, i) => (
+    <AnimatedReveal
+      key={skill.name + i}
+      type="card"
+      className={"relative mx-auto flex items-center justify-center " +
+        "w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 " +
+        "rounded-2xl border border-[var(--tech-stack-box-border-color)] backdrop-blur-xl " +
+        "shadow-[0_8px_24px_rgba(0,0,0,0.7)] transition-all duration-300 group " +
+        "hover:scale-105 hover:shadow-[0_12px_32px_rgba(0,0,0,0.8)]"}
+    >
+      <div className="absolute top-1 px-2 py-1 bg-[#0f1114]/70 border border-white/10 rounded-md text-xs text-gray-200
+        opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0
+        transition-all duration-300 ease-out">
+        {skill.name}
+      </div>
+      <div className="flex items-center justify-center w-full h-full">
+        {skill.icon}
+      </div>
+    </AnimatedReveal>
+  ))}
+
+</div>
+
+ </div>
+
       </motion.div>
     </section>
   );

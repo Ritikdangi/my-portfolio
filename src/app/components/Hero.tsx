@@ -25,12 +25,12 @@ export const item = {
 };
 
 export const card = {
-  hidden: { opacity: 0, y: 40, scale: 0.96 },
+  hidden: { opacity: 0, y: 20, scale: 0.96 },
   show: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.3, ease: "easeOut" as const },
+    transition: { duration: 0.1, ease: "easeOut" as const },
   },
   exit: {
     opacity: 0,
@@ -46,7 +46,8 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative pt-24  min-h-screen py-12  flex items-center justify-center  overflow-hidden"
+      className="relative pt-24  min-h-screen py-12  flex items-center justify-center  overflow-hidden overscroll-none"
+      style={{ overscrollBehavior: "none" }}
     >
       <motion.div
         className="w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-32 xl:px-48 z-10 flex flex-col items-start"
@@ -55,7 +56,7 @@ export default function Hero() {
         animate="show"
       >
         <motion.h2 className="text-3xl text-white mb-2 font-mono" variants={item}>
-          Namaste(); I'm
+          {"Namaste(); I\u2019m"}
         </motion.h2>
 
         <motion.h1
@@ -115,7 +116,7 @@ export default function Hero() {
             whileHover={{ x: -4, y: -4, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Let’s Talk!
+              {"Let\u2019s Talk!"}
           </motion.a>
         </motion.div>
       </motion.div>

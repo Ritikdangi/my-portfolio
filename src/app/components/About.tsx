@@ -38,17 +38,18 @@ function About() {
 
           <div className="mt-6">
             <a
-              href="/Ritik_Resume.pdf"
-              download
-              className="group relative flex items-center overflow-hidden rounded-full bg-gradient-to-r from-pink-400 to-purple-600 text-white shadow-lg transition-all duration-500 hover:pr-6 w-12 h-12 hover:w-36"
-            >
-              <span className="flex items-center justify-center w-12 h-12">
-                <DownloadCloud size={22} />
-              </span>
-              <span className="absolute left-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-sm font-medium">
-                Resume
-              </span>
-            </a>
+                href="https://drive.google.com/file/d/1MNHwZsPvbs7jLQBK_b9wx1matc-L2hx6/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex items-center overflow-hidden rounded-full bg-gradient-to-r from-pink-400 to-purple-600 text-white shadow-lg transition-all duration-500 hover:pr-6 w-12 h-12 hover:w-36"
+              >
+                <span className="flex items-center justify-center w-12 h-12">
+                  <DownloadCloud size={22} />
+                </span>
+                <span className="absolute left-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-sm font-medium">
+                  Resume
+                </span>
+              </a>
           </div>
         </AnimatedReveal>
 
