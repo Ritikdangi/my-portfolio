@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { AnimatedReveal } from "./AnimatedCard";
 import { FaGithub } from "react-icons/fa";
@@ -11,7 +12,7 @@ const projects = [
     title: "StayTale",
     description:
       "Full‑stack hotel booking platform (React, Tailwind, Express, MongoDB). Bookings, mock payments, search & filters.",
-    image: "/projects/staytale.png",
+  image: "/projects/staytale.webp",
     live: "https://staytale-clean.vercel.app/",
     repo: "https://github.com/Ritikdangi/staytale-clean",
   },
@@ -19,7 +20,7 @@ const projects = [
     title: "MockMentor",
     description:
       "AI interview platform (Next.js, Tailwind, PostgreSQL). Voice recording & AI feedback • Role-based interview flows • Performance analytics to track progress.",
-    image: "/projects/mockmentor.png",
+  image: "/projects/mockmentor.webp",
     live: "https://mock-mentor-five.vercel.app/",
     repo: "https://github.com/Ritikdangi/MockMentor",
   },
@@ -35,7 +36,7 @@ const projects = [
     title: "Let'sTalk",
     description:
       "Real-time chat platform (React, Tailwind, Socket.io). One-to-one messaging, online/offline status, and typing indicators for smooth conversations.",
-    image: "/projects/letstalk.png",
+  image: "/projects/letstalk.webp",
     live: "https://letstalkfrontend-wheat.vercel.app/login",
     repo: "https://github.com/Ritikdangi/Let-s-talk",
   },
@@ -43,7 +44,7 @@ const projects = [
     title: "NoteNest",
     description:
       "Full-stack note-taking app (React, Vite, Tailwind). OTP authentication, Google OAuth and a minimal dashboard designed for fast note creation.",
-    image: "/projects/notesync.png",
+  image: "/projects/notesync.webp",
     live: "https://note-taking-application-sigma.vercel.app/signin",
     repo: "https://github.com/Ritikdangi/note-taking-application",
   },
@@ -128,7 +129,7 @@ export default function Projects() {
               {/* small screens: inline framed image */}
               <div className="block lg:hidden w-full flex items-center justify-center">
                 <div className="bg-white rounded-none rounded-tl-[40px] overflow-hidden border border-gray-100 shadow-inner w-full max-w-[520px]">
-                  <img src={p.image} alt={p.title} className="w-full h-auto object-cover" />
+                  <Image src={p.image} alt={p.title} width={520} height={320} className="w-full h-auto object-cover" />
                 </div>
               </div>
             </div>
@@ -138,7 +139,7 @@ export default function Projects() {
               className="hidden lg:block absolute right-0 bottom-0 w-[50%] max-w-[560px] rounded-none rounded-tl-[40px] overflow-hidden bg-white shadow-xl z-40"
               style={{ top: "5.5rem" }}
             >
-              <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
+              <Image src={p.image} alt={p.title} width={560} height={360} className="w-full h-full object-cover" />
             </div>
           </AnimatedReveal>
         ))}

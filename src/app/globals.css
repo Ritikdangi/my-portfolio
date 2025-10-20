@@ -33,3 +33,43 @@ html, body {
   --tech-stack-box-second-color: #2c2c3a;
   --tech-stack-box-border-color: rgba(255, 255, 255, 0.1);
 }
+
+/* Profile decorative hover helpers */
+.group:hover {
+  /* ensure descendant hover styles run smoothly */
+}
+
+.profile-deco-line {
+  will-change: width, height, opacity, transform;
+}
+
+.profile-deco-dot {
+  will-change: opacity, transform;
+}
+
+/* Ensure transform animations are GPU-accelerated and crisp */
+.profile-deco-line,
+.profile-deco-dot {
+  backface-visibility: hidden;
+  transform-origin: center;
+}
+
+/* Loading splash overrides */
+.app-loading-overlay {
+  background: linear-gradient(180deg, #0f0c1a 0%, #151524 100%);
+}
+
+/* Three-bar loader animation */
+.loader-bar {
+  display: inline-block;
+  transform-origin: center bottom;
+}
+
+@keyframes loader-bounce {
+  0%, 100% { transform: scaleY(0.25); opacity: 0.6; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+
+.animate-loader-delay-0 { animation: loader-bounce 900ms infinite cubic-bezier(.2,.8,.2,1) 0ms; }
+.animate-loader-delay-1 { animation: loader-bounce 900ms infinite cubic-bezier(.2,.8,.2,1) 150ms; }
+.animate-loader-delay-2 { animation: loader-bounce 900ms infinite cubic-bezier(.2,.8,.2,1) 300ms; }

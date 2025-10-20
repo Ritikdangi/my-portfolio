@@ -69,7 +69,7 @@ function Contact() {
           className=" absolute bottom-[0%] "
         >
           <Image
-            src="/avatar.png"
+            src="/avatar.webp"
             alt="avatar"
             width={250}
             height={250}

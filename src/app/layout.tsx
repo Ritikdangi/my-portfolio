@@ -1,4 +1,5 @@
 import "./globals.css"
+import ClientLoader from "./components/ClientLoader";
 
 export const metadata = {
   title: "Portfolio",
@@ -8,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ClientLoader />
+        {children}
+      </body>
     </html>
   )
 }

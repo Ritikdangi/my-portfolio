@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { container } from "./Hero";
 import { AnimatedReveal } from "./AnimatedCard"; 
@@ -55,11 +56,27 @@ function About() {
 
         {/* Right Side Image */}
         <AnimatedReveal className="w-full lg:w-2/5 flex justify-center pt-20 lg:justify-end">
-          <img
-            src="/profile.jpg"
-            alt="Profile"
-            className="rounded-lg shadow-lg w-64 h-72 object-cover"
-          />
+          <div className="relative group w-64 h-72">
+            <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/profile.jpg"
+                alt="Profile"
+                width={256}
+                height={288}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+
+            {/* Decorative corner lines (joined L-shapes starting at the image border and growing outward) */}
+            {/* Top-left corner - positioned flush to the image border, translate outwards a bit so the line appears outside the image */}
+            <span className="absolute top-0 left-0 -translate-x-2 -translate-y-2 h-0.5 w-40 bg-purple-500 transform scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100 rounded" aria-hidden="true" />
+            <span className="absolute top-0 left-0 -translate-x-2 -translate-y-2 w-0.5 h-40 bg-purple-500 transform scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100 rounded" aria-hidden="true" />
+
+            {/* Bottom-right corner - positioned flush to the image border */}
+            <span className="absolute bottom-0 right-0 translate-x-2 translate-y-2 h-0.5 w-40 bg-purple-500 transform scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100 rounded" aria-hidden="true" />
+            <span className="absolute bottom-0 right-0 translate-x-2 translate-y-2 w-0.5 h-40 bg-purple-500 transform scale-y-0 origin-top transition-transform duration-500 group-hover:scale-y-100 rounded" aria-hidden="true" />
+          </div>
         </AnimatedReveal>
       </motion.div>
     </section>

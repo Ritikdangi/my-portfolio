@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { container, item } from "./Hero";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
@@ -116,7 +117,9 @@ export default function Navbar() {
       <div className="w-full max-w-7xl mx-auto flex items-center justify-between">
         {/* Avatar / Logo */}
         <motion.div variants={item} className="flex items-end gap-2 h-full">
-          <motion.img src="/avatar.png" alt="logo" className="h-10 sm:h-12 object-contain " />
+          <div className="h-10 sm:h-12 relative w-10 sm:w-12">
+            <Image src="/avatar.webp" alt="logo" fill className="object-contain" />
+          </div>
         </motion.div>
 
         {/* Nav Links */}
