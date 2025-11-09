@@ -39,7 +39,7 @@ function About() {
 
           <div className="mt-6">
             <a
-                href="https://drive.google.com/file/d/1MNHwZsPvbs7jLQBK_b9wx1matc-L2hx6/view?usp=sharing"
+                href="https://drive.google.com/file/d/1TsZRxQc0HUz-pW0m_3aCrwgUf6l5DgN3/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative flex items-center overflow-hidden rounded-full bg-gradient-to-r from-pink-400 to-purple-600 text-white shadow-lg transition-all duration-500 hover:pr-6 w-12 h-12 hover:w-36"
